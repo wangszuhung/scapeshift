@@ -1,0 +1,255 @@
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+<style>
+	.pic_position {
+	  position: relative;
+	  /*text-align: center;*/
+	  /*color: white;*/
+	}
+	.pic_position .bottom_left {
+	  position: absolute;
+	  bottom: 8px;
+	  left: 16px;
+	}
+	.pic_position .top_left {
+	  position: absolute;
+	  top: 10%;
+	  left: 10%;
+	}
+	.pic_position .top_right {
+	  position: absolute;
+	  top: 8px;
+	  right: 16px;
+	}
+	.pic_position .bottom_right {
+	  position: absolute;
+	  bottom: 8px;
+	  right: 16px;
+	}
+	.pic_position .centered {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	}
+	.pic_position .one {
+	  position: absolute;
+	  top: 2%;
+	  left: 15%;
+	}
+	.pic_position .two {
+	  position: absolute;
+	  top: 13%;
+	  right: 38%;
+	}
+	.pic_position .two_1 {
+	  position: absolute;
+	  top: 15%;
+	  right: 38%;
+	}
+	.pic_position .two_2 {
+	  position: absolute;
+	  top: 14.5%;
+	  right: 40%;
+	}
+	.pic_position .two_3 {
+	  position: absolute;
+	  top: 14%;
+	  right: 42%;
+	}
+	.pic_position .three {
+	  position: absolute;
+	  bottom: 0%;
+	  right: 33%;
+	}
+
+</style>
+ 
+
+<div id="api">
+	<!-- <div class="container"> -->
+		<div>
+			<!-- <button v-on:click="btn_click(1)">
+				1
+			</button>
+			<button v-on:click="btn_click(2)">
+				2
+			</button> -->
+		</div>
+		<h1 style="text-align: center;background-color: #131838;color: white;">PoPBOX</h1>
+		<!-- <img src="/templates/52222.jpg" alt=""> -->
+		<div class="col-md-12">
+			<div class="pic_position">
+				<img src="https://images2.imgbox.com/41/69/AmxgSgrX_o.png" style="width: 100%;height: 90%" alt="image host"/>
+				<!-- <img src="/assets/images/about/about_1.jpg" alt="Snow" class="img_use"> -->
+				<div class="one">
+					<!-- <span class="col-md-6" v-if="all.read_button_1 =='0'"> -->
+						<button style="width:30px;height:400px;background-color: green;transform:rotate(62deg);">
+							<!-- one -->
+						</button>
+					<!-- </span> -->
+					<!-- <span class="col-md-6" v-if="all.read_button_1 =='1'">
+						<button style="width:80px;height:80px;background-color: red;">
+							one
+						</button>
+					</span> -->
+				</div>
+				<div class="two">
+					<!-- <span class="col-md-6" v-if="all.read_button_2 =='0'"> -->
+						<button style="width:350px;height:30px;background-color: darkgray;transform:rotate(5deg);">
+							<!-- 1 -->
+						</button>
+					<!-- </span> -->
+					<!-- <span class="col-md-6" v-if="all.read_button_2 =='1'"> -->
+						<!-- <button style="width:350px;height:30px;background-color: darkgray;transform:rotate(5deg);"> -->
+							<!-- 1 -->
+						<!-- </button> -->
+					<!-- </span> -->
+				</div>
+				<div class="two_1">
+					<span class="col-md-6" v-if="all.read_button_1 =='0'">
+						<button style="width:30px;height:30px;border-radius:999em;background-color: green;transform:rotate(5deg);">
+							1
+						</button>
+					</span>
+					<span class="col-md-6" v-if="all.read_button_1 =='1'">
+						<button style="width:30px;height:30px;border-radius:999em;background-color: red;transform:rotate(5deg);">
+							1
+						</button>
+					</span>
+				</div>
+				<div class="two_2">
+					<span class="col-md-6" v-if="all.read_button_2 =='0'">
+						<button style="width:30px;height:30px;border-radius:999em;background-color: green;transform:rotate(5deg);">
+							2
+						</button>
+					</span>
+					<span class="col-md-6" v-if="all.read_button_2 =='1'">
+						<button style="width:30px;height:30px;border-radius:999em;background-color: red;transform:rotate(5deg);">
+							2
+						</button>
+					</span>
+				</div>
+				<div class="two_3">
+					<span class="col-md-6" v-if="all.read_button_3 =='0'">
+						<button style="width:30px;height:30px;border-radius:999em;background-color: green;transform:rotate(5deg);">
+							3
+						</button>
+					</span>
+					<span class="col-md-6" v-if="all.read_button_3 =='1'">
+						<button style="width:30px;height:30px;border-radius:999em;background-color: red;transform:rotate(5deg);">
+							3
+						</button>
+					</span>
+				</div>
+				<div class="three">
+					<!-- <span class="col-md-6" v-if="all.read_button_3 =='0'"> -->
+						<button style="width:30px;height:250px;background-color: green;transform:rotate(-29deg);">
+							<!-- three -->
+						</button>
+					<!-- </span> -->
+					<!-- <span class="col-md-6" v-if="all.read_button_3 =='1'">
+						<button style="width:80px;height:80px;background-color: red;">
+							three
+						</button>
+					</span> -->
+				</div>
+			</div>
+		</div>
+
+
+<!-- 
+
+		<div class="col-md-12">
+			<span class="col-md-6" v-if="all.read_button_1 =='0'">
+				<button style="width:80px;height:80px;background-color: green;">
+					read_button_1 : 000
+				</button>
+			</span>
+			<span class="col-md-6" v-if="all.read_button_1 =='1'">
+				<button style="width:80px;height:80px;background-color: red;">
+					read_button_1 : 111
+				</button>
+			</span>
+			<span class="col-md-6" v-if="all.read_button_2 =='0'">
+				<button style="width:80px;height:80px;background-color: green;">
+					read_button_2 : 000
+				</button>
+			</span>
+			<span class="col-md-6" v-if="all.read_button_2 =='1'">
+				<button style="width:80px;height:80px;background-color: red;">
+					read_button_2 : 111
+				</button>
+			</span>
+			<span class="col-md-6" v-if="all.read_button_3 =='0'">
+				<button style="width:80px;height:80px;background-color: green;">
+					read_button_3 : 000
+				</button>
+			</span>
+			<span class="col-md-6" v-if="all.read_button_3 =='1'">
+				<button style="width:80px;height:80px;background-color: red;">
+					read_button_3 : 111
+				</button>
+			</span>
+		</div> -->
+	<!-- </div> -->
+	
+</div>
+
+<script>
+	var all_id = 2;
+	var Api = new Vue({
+		el: '#api',
+		data: { 
+			all :"",
+		},
+		created: function () {
+			console.log("setInterval");
+			window.timer = setInterval(this.fetchdata, 1000);
+		},
+		mounted () {		
+			// $.ajax({
+			// 	type: "GET",
+			// 	url: ('/api'),
+			// 	dataType: "json",
+			// 	// dataType: "text",
+			// 	async: true,
+			// 	success: function(res) {
+			// 		console.log("api",res);
+			// 		Api.all = res;
+			// 	},
+			// 	error: function(jqXHR) {
+			// 		console.log("發生錯誤: " + jqXHR.status);
+			// 	}
+			// })
+		},
+		methods:{
+			fetchdata:function(){
+				console.log("fetchdata",all_id);
+				$.ajax({
+					type: "GET",
+					url: ('/api'),
+					dataType: "json",
+					// dataType: "text",
+					async: true,
+					success: function(res) {
+						console.log("api",res);
+						Api.all = res;
+					},
+					error: function(jqXHR) {
+						console.log("發生錯誤: " + jqXHR.status);
+					}
+				})
+			},
+			btn_click:function(get_id){
+				console.log(get_id);
+				all_id = get_id;
+				window.timer = setInterval(this.fetchdata, 1000);
+			},
+		}
+	});
+</script>
+
